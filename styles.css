@@ -96,15 +96,15 @@ nav.scrolled {
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { transform: scaleX(1); }
 .nav-cta {
-  background: linear-gradient(90deg, var(--blue), var(--teal)) !important;
-  border: none !important;
-  color: #fff !important;
+  background: transparent !important;
+  border: 1px solid var(--teal) !important;
+  color: var(--teal) !important;
   padding: 8px 20px;
   border-radius: 8px;
   font-weight: 500 !important;
-  transition: opacity .2s, transform .2s !important;
+  transition: background .2s, color .2s !important;
 }
-.nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+.nav-cta:hover { background: rgba(6,214,160,0.1) !important; }
 .nav-cta::after { display: none !important; }
 .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
 .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--muted); border-radius: 1px; transition: .3s; }
