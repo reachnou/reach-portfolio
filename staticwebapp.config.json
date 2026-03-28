@@ -1,0 +1,11 @@
+{
+  "navigationFallback": {
+    "rewrite": "/portfolio.html"
+  },
+  "routes": [
+    {
+      "route": "/",
+      "rewrite": "/portfolio.html"
+    }
+  ]
+}
