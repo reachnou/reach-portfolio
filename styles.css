@@ -460,7 +460,7 @@ h1 {
 
 
 /* ── ABOUT ─────────────────────────────────────────── */
-#about { padding: 120px 0; }
+#about { padding: 120px 0 64px; }
 .about-grid {
   display: grid;
   grid-template-columns: min(400px, 42%) 1fr;
@@ -697,8 +697,8 @@ h2 {
 .pill.teal { border-color: rgba(6,214,160,0.3); color: var(--teal); background: rgba(6,214,160,0.08); }
 
 /* ── SKILLS ────────────────────────────────────────── */
-#skills { padding: 120px 0; background: var(--bg2); }
-.skills-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 48px; }
+#skills { padding: 64px 0 64px; background: var(--bg2); }
+.skills-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
 
 /* Grid fade when collapsed */
 .skills-grid-wrap { position: relative; }
@@ -790,7 +790,7 @@ h2 {
 }
 
 /* ── EXPERIENCE ────────────────────────────────────── */
-#experience { padding: 120px 0; }
+#experience { padding: 64px 0 64px; }
 
 .xp-grid {
   display: grid;
@@ -799,11 +799,11 @@ h2 {
   padding-left: 48px;
 }
 
-/* Timeline vertical line */
+/* Timeline vertical line — aligned through dot centers */
 .xp-grid::before {
   content: '';
   position: absolute;
-  left: 16px;
+  left: 6px;
   top: 32px;
   bottom: 32px;
   width: 2px;
@@ -887,12 +887,18 @@ h2 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+.xp-role-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
 .xp-role {
   font-family: var(--font-head);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.01em;
-  margin-bottom: 4px;
   line-height: 1.2;
 }
 .xp-company {
@@ -1021,7 +1027,7 @@ h2 {
 }
 
 /* ── EDUCATION ─────────────────────────────────────── */
-#education { padding: 120px 0; }
+#education { padding: 64px 0 120px; }
 
 .edu-grid {
   display: grid;
@@ -1564,7 +1570,7 @@ footer {
   /* Experience */
   .xp-grid { padding-left: 32px; }
   .xp-dot { left: -32px; }
-  .xp-grid::before { left: 10px; }
+  .xp-grid::before { left: 3px; }
   .xp-header { flex-direction: column; gap: 10px; }
   .xp-meta { text-align: left; align-items: flex-start; }
   .xp-metrics { flex-wrap: wrap; }

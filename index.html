@@ -419,10 +419,7 @@ const experiences = [
     period: 'Oct 2025 – Present',
     location: 'McKinney, TX',
     current: true,
-    metrics: [
-      { value: '.NET', label: 'Core Stack' },
-      { value: 'Full', label: 'Stack' },
-    ],
+    metrics: [],
     bullets: [
       'Building full-stack enterprise solutions using .NET and Angular for business-critical workflows.',
       'Designing scalable backend services following DDD, SOLID, and Clean Architecture principles.',
@@ -589,12 +586,14 @@ document.getElementById('xp-grid').innerHTML = experiences.map((x, i) => `
         <div class="xp-title-group">
           <div class="xp-company-badge" style="background:${x.color}18;color:${x.color};border-color:${x.color}35">${x.initial}</div>
           <div>
-            <div class="xp-role">${x.role}</div>
+            <div class="xp-role-row">
+              <div class="xp-role">${x.role}</div>
+              ${x.current ? '<span class="xp-current-badge">Current</span>' : ''}
+            </div>
             <div class="xp-company"><a href="${x.link}" target="_blank" rel="noopener">${x.company} <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a></div>
           </div>
         </div>
         <div class="xp-meta">
-          ${x.current ? '<span class="xp-current-badge">Current</span>' : ''}
           <div class="xp-period">${x.period}</div>
           <div class="xp-location"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> ${x.location}</div>
         </div>
